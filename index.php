@@ -86,7 +86,7 @@ include ("lab5.php");
 include ("lab6.php");
 include ("lab7.php");
 ?>
-
+   <h2 class="title">Надо сделать таблицу умножения с POST, матрицу Крамера, случайный пароль, сравнение цифер первых трех и последних.Разменный аппарат.</h2>
 				
             </div><!--//container-->
         </section><!--//cards-section-->

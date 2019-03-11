@@ -142,7 +142,8 @@ foreach ($menu as $array){
 	?>
 	<li>
 	<a href = <?php echo $array['href'];?>>
-	<?php echo $array['title'];?>
+	<?php echo $array['title'];?></a>
+    
 	
 	<?PHP
 }
