@@ -37,30 +37,55 @@ drawTable (15,15);
 
  </h3>
 <?PHP
-$arr= array (5,13,25,2,11,7,88,52,36,47,95,36,14,2,8,35,4,6,8,43);
-print_r ($arr);
 
+echo "<h3> Cортировка обменами </h3><br>";
+	function sortObmen (){
+$array = array(1, 0, 6, 9, 4, 5, 2, 3, 8, 7); // исходный массив
+ 
+// перебираем массив
+for ($j = 0; $j < count($array) - 1; $j++){
+    for ($i = 0; $i < count($array) - $j - 1; $i++){
+        // если текущий элемент больше следующего
+        if ($array[$i] > $array[$i + 1]){
+            // меняем местами элементы
+            $tmp_var = $array[$i + 1];
+            $array[$i + 1] = $array[$i];
+            $array[$i] = $tmp_var;
+        }
+    }
+}
+ 
+// вывод результата
+	var_dump($array);}
+	echo sortObmen ();
+?>
+<br>
+<br>
+<?php
+  echo "<h3> Cортировка вставками </h3><br>";
 
-	$x= count ($arr);
-	echo $x;
-	
-	for ($i=0; $i<=$x-1; $i++)
-	{
-		if ($arr[i]>$arr[$i+1]){
-		$temp = $arr[i];
-		$arr[i] = $arr[$i+1];
-		$arr[$i+1] = $temp;
-		}
-		//echo "$arr[$i] <br>";
-	}
-	//else continue;
-	print_r ($arr);
-
-/*function sortObmen ()
+	function insertionSort($mas, $masCount)
 {
 	
+    for($i = 1; $i < $masCount; $i++)
+    {
+        $rightValue = $mas[$i];
+        $leftValue = $i - 1;
+        
+        while($leftValue >= 0 && $mas[$leftValue] > $rightValue)
+        {
+            $mas[$leftValue+1] = $mas[$leftValue];
+            $leftValue--;
+        }
+        
+        $mas[++$leftValue] = $rightValue;
+    }
+    
+    return $mas;
 }
-sortObmen ();*/
+$mas = array (5, 7, 3, 8, 3, 9, 0, 3, 2, 7, 9, 4);
+$masCount = count ($mas);
+print_r (insertionSort ($mas, $masCount));
 ?>
 <h3>Создание функции отрисовки меню навигации по сайту 5.2.
 </h3>

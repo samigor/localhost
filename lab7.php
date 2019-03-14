@@ -107,10 +107,10 @@
  		include 'lab7.php';
  		break;
  	 	case 'lab8':
- 		include 'lab8.php';
+ 		include 'calc.php';
  		break;
  	 	case 'lab9':
- 		include 'lab9.php';
+ 		include 'table.php';
  		break;
   	case 'lab10':
  		include 'lab10.php';
@@ -148,4 +148,10 @@ foreach ($menu as $array){
 	<?PHP
 }
 echo "</ul>";
+?>
+<h3>Упражнение 4. Допиливаем таблицу умножения.
+ </h3>
+
+<?
+include 'table.php';
 ?>

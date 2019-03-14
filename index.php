@@ -54,10 +54,12 @@ $menu = array (
 					'lab5' => array ('title'=>'Лаба5', 'href'=>'lab5.php'),
 					'lab6' => array ('title'=>'Лаба6', 'href'=>'lab6.php'),
 					'lab7' => array ('title'=>'Лаба7', 'href'=>'lab7.php'),
-					'lab8' => array ('title'=>'Лаба8', 'href'=>'lab8.php'),
-					'lab9' => array ('title'=>'Лаба9', 'href'=>'lab9.php'),
-					'lab10' => array ('title'=>'Лаба10', 'href'=>'lab10.php'),
-					'lab11' => array ('title'=>'Лаба11', 'href'=>'lab11.php'),
+					'calc' => array ('title'=>'calc', 'href'=>'calc.php'),
+					'table' => array ('title'=>'table', 'href'=>'table.php'),
+					'kramer' => array ('title'=>'kramer', 'href'=>'kramer.php'),
+					'randompass' => array ('title'=>'randompass', 'href'=>'randompass.php'),
+					'sravnitri' => array ('title'=>'sravnitri', 'href'=>'sravnitri.php'),
+					'razmen' => array ('razmen'=>'Лаба11', 'href'=>'razmen.php'),
 );
 echo "";
 foreach ($menu as $array){
@@ -85,9 +87,18 @@ include ("lab4.php");
 include ("lab5.php");
 include ("lab6.php");
 include ("lab7.php");
+//include ("table.php");
+include ("calc.php");
+
 ?>
-   <h2 class="title">Надо сделать таблицу умножения с POST, матрицу Крамера, случайный пароль, сравнение цифер первых трех и последних.Разменный аппарат.</h2>
-				
+   <h3 class="title"> Сделать решение матрицы Крамера.</h3>
+	<?include 'kramer.php'; ?>			
+	 <h3 class="title"> Случайный пароль</h3>
+	 	<?include 'randompass.php'; ?>	
+	  <h3 class="title">Сравнение цифер первых трех и последних</h3>
+	  	<?include 'sravnitri.php'; ?>	
+	   <h3 class="title">Разменный аппарат.</h3>
+	   	<?include 'razmen.php'; ?>	
             </div><!--//container-->
         </section><!--//cards-section-->
     </div><!--//page-wrapper-->
