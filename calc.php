@@ -6,6 +6,8 @@ $num1= (int) (trim($_POST ['num1']));
 $num2= (int) (trim($_POST ['num2']));
 $op = trim ($_POST ['operator']);
 $result = "Результат $num1 $op $num2 = ";
+if ($op == '/' AND $num2 == 0) {
+	echo "Деление на ноль"; die;}
 switch ($op){
 	case '-':
 	$result .= $num1 - $num2;
@@ -20,6 +22,7 @@ switch ($op){
 	$result .= $num1 / $num2;
 	break;
 }
+
 
 
 ?>
