@@ -56,4 +56,4 @@ function razmennik($m1)
     }
 }
 echo razmennik($m1);
-?>
+?><hr>

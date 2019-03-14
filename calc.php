@@ -1,3 +1,5 @@
+<h3>Калькулятор </h3>
+
 <?
 
 $num1= (int) (trim($_POST ['num1']));
@@ -33,3 +35,4 @@ switch ($op){
 
 echo $result;
 ?>
+<hr>

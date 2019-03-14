@@ -139,4 +139,4 @@ function get_det($rows, $c)
 
 }
 
-?>
+?><hr>
