@@ -15,7 +15,6 @@ $file='./uploads/text.txt';
 $n =  substr_count(strtolower(file_get_contents($file)), $word);
 echo "В файле $file слово $word повторяется $n раз <br>"; */
         function getdir($dir_name) {
-	global $file, $word, $n;
              $dir = scandir($dir_name);
 	foreach($dir as $d) {
 	      if($d != '.' and $d != '..') {
