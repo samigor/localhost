@@ -59,7 +59,7 @@ $menu = array (
 					'kramer' => array ('title'=>'kramer', 'href'=>'kramer.php'),
 					'randompass' => array ('title'=>'randompass', 'href'=>'randompass.php'),
 					'sravnitri' => array ('title'=>'sravnitri', 'href'=>'sravnitri.php'),
-					'razmen' => array ('razmen'=>'Лаба11', 'href'=>'razmen.php'),
+					'razmen' => array ('title'=>'razmen', 'href'=>'razmen.php'),
 );
 echo "";
 foreach ($menu as $array){
