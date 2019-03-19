@@ -49,4 +49,4 @@ echo "</tr>";
 echo "</table>";}
 
 drawTable2 ($cols,$rows,$color);
-?><hr>
+?><hr>  <a href="index.php">На главную</a>

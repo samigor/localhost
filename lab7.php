@@ -104,7 +104,7 @@
  		include 'lab6.php';
  		break;
  	 	case 'lab7':
- 		include 'lab7.php';
+ 		include 'lab2.php';
  		break;
  	 	case 'lab8':
  		include 'calc.php';

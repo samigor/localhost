@@ -24,3 +24,4 @@ $random = function ($a, $b) {
 echo "Пароль: ";
 echo($random(0, $c));
 ?><hr>
+  <a href="index.php">На главную</a>

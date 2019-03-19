@@ -1,4 +1,5 @@
 <?PHP
+ob_start();
 $visitCounter = 0;
 $lastVisi=0;
 if (isset($_COOKIE['lastVisit'])) {
@@ -29,3 +30,4 @@ if (isset($_COOKIE['visitCounter'])== 0) {
 	echo "Вы зашли $_COOKIE[visitCounter] раз! Дата последнего визита ". date('d-m-Y')  ;
 }
 ?>
+  <a href="index.php">На главную</a>

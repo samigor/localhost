@@ -56,4 +56,4 @@ function razmennik($m1)
     }
 }
 echo razmennik($m1);
-?><hr>
+?><hr>  <a href="index.php">На главную</a>

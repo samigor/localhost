@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if !IE]><!--> 
+<html lang="en"> <!--<![endif]-->  
+
 <head>
-    <title>Responsive website template for documentations</title>
+ 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,51 +30,124 @@
 </head> 
 
 <body class="landing-page">   
+			<?PHP
+					// Получаем текущий час в виде строки от 00 до 23 и приводим строку к целому числу от 0 до 23
+					$hour = (int) strftime ('%H');
+					$welcome = ''; //инициализируем переменную для приветствия
+					 
+					if ( 0 < $hour and $hour < 6){$welcome = "<b>Доброй ночи</b>";}
+					elseif ( 7 < $hour and $hour < 13)  {$welcome = "<b>Доброе утро</b>";}
+					elseif ( 12 < $hour and $hour < 16)  {$welcome = "<b>Добрый день</b>";}
+					elseif ( 15 < $hour and $hour < 23) {$welcome = "<b>Доброй вечер</b>";	}
+					else {$welcome = "Иди спать";	}				
+					
+					/*echo "$welcome , Гость";*/
+					?>
+     <? ob_start();
+ $title = 'Лабораторная №7';
+ $header = "$welcome, Гость!";
+ $id = strtolower(strip_tags(trim($_GET['id'])));
+ switch ($id) {
+ 	case 'lab1':
+ 		$title = 'лаба№1';
+ 		$header = "Лабораторная работа №1";
+ 		break;
+ 	case 'lab2':
+ 		$title = 'лаба№2';
+ 		$header = "Лабораторная работа №2";
+ 		break;
+  	case 'lab3':
+ 		$title = 'лаба№3';
+ 		$header = "Лабораторная работа №3";
+ 		break;
+ 	case 'lab4':
+ 		$title = 'лаба№4';
+ 		$header = "Лабораторная работа №4";
+ 		break;
+ 	case 'lab5':
+ 		$title = 'лаба№5';
+ 		$header = "Лабораторная работа №5";
+ 		break;
+ 	case 'lab6':
+ 		$title = 'лаба№6';
+ 		$header = "Лабораторная работа №6";
+ 		break;
+ 	case 'lab7':
+ 		$title = 'лаба№7';
+ 		$header = "Лабораторная работа №7";
+ 		break;
+ 	case 'lab8':
+ 		$title = 'лаба№8';
+ 		$header = "Лабораторная работа №8";
+ 		break;
+ 	case 'lab9':
+ 		$title = 'лаба№9';
+ 		$header = "Лабораторная работа №9";
+ 		break;
+ 	case 'lab10':
+ 		$title = 'лаба№10';
+ 		$header = "Лабораторная работа №10";
+ 		break;
+ 	case 'lab11':
+ 		$title = 'лаба№11';
+ 		$header = "Лабораторная работа №11";
+ 		break;
+ 		
+ 	 }  
+    
+?>
      
-     
-    <div class="page-wrapper">
-        
+   <div class="page-wrapper"><br> 
+         <title><?php echo $title?></title> 
         <!-- ******Header****** -->
         <header class="header text-center">
             <div class="container">
                 <div class="branding">
                     <h1 class="logo">
                         <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                        <span class="text-highlight">SAM</span><span class="text-bold">IGOR</span>
+                        <span class="text-highlight">SAM</span><span class="text-bold">IGOR</span> <p><h1><?php echo $header?> </h1></p>
                     </h1>
                 </div><!--//branding-->
                 <div class="tagline">
                     <p>Тема для свободного творчества в лабораторных и домашних заданиях</p>
                     <p>Designed with <i class="fa fa-heart"></i> for developers</p>
-                </div><!--//tagline-->
-                   <?PHP
+
+<?
 $menu = array (
-					'lab1' => array ('title'=>'Лаба1', 'href'=>'index.php'),
-					'lab2' => array ('title'=>'Лаба2', 'href'=>'index.php'),
-					'lab3' => array ('title'=>'Лаба3', 'href'=>'index.php'),
-					'lab4' => array ('title'=>'Лаба4', 'href'=>'lab4.php'),
-					'lab5' => array ('title'=>'Лаба5', 'href'=>'lab5.php'),
-					'lab6' => array ('title'=>'Лаба6', 'href'=>'lab6.php'),
-					'lab7' => array ('title'=>'Лаба7', 'href'=>'lab7.php'),
+					'lab1' => array ('title'=>'Лаба1', 'href'=>'index.php?id=lab1'),
+					'lab2' => array ('title'=>'Лаба2', 'href'=>'index.php?id=lab2'),
+					'lab3' => array ('title'=>'Лаба3', 'href'=>'index.php?id=lab3'),
+					'lab4' => array ('title'=>'Лаба4', 'href'=>'index.php?id=lab4'),
+					'lab5' => array ('title'=>'Лаба5', 'href'=>'index.php?id=lab5'),
+					'lab6' => array ('title'=>'Лаба6', 'href'=>'index.php?id=lab6'),
+					'lab7' => array ('title'=>'Лаба7', 'href'=>'index.php?id=lab7'),
+					'lab8' => array ('title'=>'Лаба8', 'href'=>'index.php?id=lab8'),
+					'lab9' => array ('title'=>'Лаба9', 'href'=>'lab9.php'),
+					'lab10' => array ('title'=>'Лаба10', 'href'=>'index.php?id=lab10'),
+					'lab11' => array ('title'=>'Лаба11', 'href'=>'index.php?id=lab11'),
 					'calc' => array ('title'=>'calc', 'href'=>'calc.php'),
 					'table' => array ('title'=>'table', 'href'=>'table.php'),
 					'kramer' => array ('title'=>'kramer', 'href'=>'kramer.php'),
 					'randompass' => array ('title'=>'randompass', 'href'=>'randompass.php'),
 					'sravnitri' => array ('title'=>'sravnitri', 'href'=>'sravnitri.php'),
 					'razmen' => array ('title'=>'razmen', 'href'=>'razmen.php'),
+                    'test' => array ('title'=>'test', 'href'=>'./test/index.php'),
 );
-echo "";
+/*echo "<ul>";*/
 foreach ($menu as $array){
 	?>
 	
 	<a href = <?php echo $array['href'];?>>
 	<?php echo $array['title'];?></a>
+    
 	
 	<?PHP
 }
-echo "";
-
+/*echo "</ul>";*/
 ?>
+                </div><!--//tagline-->
+
+    
             </div><!--//container-->
         </header><!--//header-->
         
@@ -80,34 +155,56 @@ echo "";
             <div class="container">
                 <h2 class="title">Курсы PHP с WEZOM</h2>
                 <div class="intro">
-<?
-include ("lab1.php");
-include ("lab3.php");
-include ("lab4.php");
-include ("lab5.php");
-include ("lab6.php");
-include ("lab7.php");
-//include ("table.php");
-include ("calc.php");
-
+  <?php
+ switch ($id) {
+ 	case 'lab1':
+ 		include 'lab1.php';
+ 		break;
+ 	case 'lab2':
+ 		include 'lab2.php';
+ 		break;
+ 	case 'lab3':
+ 		include 'lab3.php';
+ 		break;
+ 	case 'lab4':
+ 		include 'lab4.php';
+ 		break;
+ 	case 'lab5':
+ 		include 'lab5.php';
+ 		break;
+ 	case 'lab6':
+ 		include 'lab6.php';
+ 		break;
+ 	case 'lab7':
+ 		include 'lab7.php';
+ 		break;
+ 	case 'lab8':
+ 		include 'lab8.php';
+ 		break;
+ 	case 'lab9':
+ 		include 'lab9.php';
+ 		break;
+  	case 'lab10':
+ 		include 'lab10.php';
+ 		break;
+ 	case 'lab11':
+ 		include 'lab11.php';
+ 		break;
+ 		 	
+ 	/*default:
+ 		include 'index.php';
+ 		break;*/
+ }
 ?>
-   <h3 class="title"> Сделать решение матрицы Крамера.</h3>
-	<?include 'kramer.php'; ?>			
-	 <h3 class="title"> Случайный пароль</h3>
-	 	<?include 'randompass.php'; ?>	
-	  <h3 class="title">Сравнение цифер первых трех и последних</h3>
-	  	<?include 'sravnitri.php'; ?>	
-	   <h3 class="title">Разменный аппарат.</h3>
-	   	<?include 'razmen.php'; ?>	
             </div><!--//container-->
         </section><!--//cards-section-->
     </div><!--//page-wrapper-->
 
-
+                   
     <footer class="footer text-center">
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+           
             
         </div><!--//container-->
 	
@@ -121,5 +218,4 @@ include ("calc.php");
     <script type="text/javascript" src="assets/js/main.js"></script>
     
 </body>
-</html> 
-
+</html>

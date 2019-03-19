@@ -4,7 +4,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
  <h3>Лабораторная работа №8. Работа с файлами. Написать программу, которая ищет слово в файле произвольной длины.	</h3>
- <form action="lab8.php" method = "POST">
+ <form action="index.php?id=lab8" method = "POST">
  	Введите слово: <input name = "word" type="text">
  	<input type="submit"><br>
    <?PHP

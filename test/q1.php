@@ -8,6 +8,7 @@
 			<input type='radio' name='answer' value='a3'>5<br>
 			<input type='hidden' name='title' value='Ответьте на вопрос'>
 			<input type='submit' value='Ответить'>
+			<input type='hidden' name='q' value='<?=++$q?>'>
 		</form>
 		</td>
 	</tr>
