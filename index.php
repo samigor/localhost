@@ -80,6 +80,14 @@
  		$title = 'лаба№8';
  		$header = "Лабораторная работа №8";
  		break;
+        case 'lab81':
+        $title = 'лаба№81';
+        $header = "Лабораторная работа №81";
+        break;
+        case 'lab82':
+        $title = 'лаба№82';
+        $header = "Лабораторная работа №82";
+        break;
  	case 'lab9':
  		$title = 'лаба№9';
  		$header = "Лабораторная работа №9";
@@ -122,6 +130,9 @@ $menu = array (
 					'lab6' => array ('title'=>'Лаба6', 'href'=>'index.php?id=lab6'),
 					'lab7' => array ('title'=>'Лаба7', 'href'=>'index.php?id=lab7'),
 					'lab8' => array ('title'=>'Лаба8', 'href'=>'index.php?id=lab8'),
+                    'lab81' => array ('title'=>'Лаба81', 'href'=>'index.php?id=lab81'),
+                    'lab82' => array ('title'=>'Лаба82', 'href'=>'index.php?id=lab82'),
+                    'lab83' => array ('title'=>'Лаба83', 'href'=>'lab83.php'),
 					'lab9' => array ('title'=>'Лаба9', 'href'=>'lab9.php'),
 					'lab10' => array ('title'=>'Лаба10', 'href'=>'index.php?id=lab10'),
 					'lab11' => array ('title'=>'Лаба11', 'href'=>'index.php?id=lab11'),
@@ -181,6 +192,15 @@ foreach ($menu as $array){
  	case 'lab8':
  		include 'lab8.php';
  		break;
+    case 'lab81':
+        include 'lab81.php';
+        break;
+    case 'lab82':
+        include 'lab82.php';
+        break;
+    case 'lab83':
+        include 'lab83.php';
+        break;
  	case 'lab9':
  		include 'lab9.php';
  		break;

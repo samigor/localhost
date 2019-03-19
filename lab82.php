@@ -3,17 +3,17 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
- <h3>Лабораторная работа №8.2 Написать программу ищет слово во всех файлах которые находятся в заданной директории и выводит список файлов где это слово содержится
+ <h3>Лабораторная работа №8.2 Написать программу ищет слово в файле text.txt которая находится в директории uploads
 	</h3>
  <form action="lab82.php" method = "POST">
  	Введите слово: <input name = "word" type="text">
  	<input type="submit"><br>
    <?PHP
-/*$word=0;
+$word=0;
 $word=trim($_POST['word']);
 $file='./uploads/text.txt';
 $n =  substr_count(strtolower(file_get_contents($file)), $word);
-echo "В файле $file слово $word повторяется $n раз <br>"; */
+echo "В файле $file слово $word повторяется $n раз <br>"; /*
         function getdir($dir_name) {
              $dir = scandir($dir_name);
 	foreach($dir as $d) {
@@ -37,5 +37,5 @@ $n =  substr_count(strtolower(file_get_contents($file)), $word);
         }
        $dir = 'C:\OSPanel\domains\localhost\uploads';
        echo getdir($dir);
-echo "В файле $file слово $word повторяется $n раз <br>";
+echo "В файле $file слово $word повторяется $n раз <br>"; */
 ?>
