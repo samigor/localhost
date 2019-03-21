@@ -96,7 +96,7 @@
  		$title = 'лаба№10';
  		$header = "Лабораторная работа №10";
  		break;
- 	case 'lab11':
+ 	case 'gbook':
  		$title = 'лаба№11';
  		$header = "Лабораторная работа №11";
  		break;
@@ -134,8 +134,8 @@ $menu = array (
                     'lab82' => array ('title'=>'Лаба82', 'href'=>'index.php?id=lab82'),
                     'lab83' => array ('title'=>'Лаба83', 'href'=>'lab83.php'),
 					'lab9' => array ('title'=>'Лаба9', 'href'=>'lab9.php'),
-					'lab10' => array ('title'=>'Лаба10', 'href'=>'index.php?id=lab10'),
-					'lab11' => array ('title'=>'Лаба11', 'href'=>'index.php?id=lab11'),
+					'lab10' => array ('title'=>'Лаба10 (тест)', 'href'=>'./test/index.php'),
+					'lab11' => array ('title'=>'Лаба11 gbook', 'href'=>'index.php?id=gbook'),
 					'calc' => array ('title'=>'calc', 'href'=>'calc.php'),
 					'table' => array ('title'=>'table', 'href'=>'table.php'),
 					'kramer' => array ('title'=>'kramer', 'href'=>'kramer.php'),
@@ -207,8 +207,8 @@ foreach ($menu as $array){
   	case 'lab10':
  		include 'lab10.php';
  		break;
- 	case 'lab11':
- 		include 'lab11.php';
+ 	case 'gbook':
+ 		include 'gbook.inc.php';
  		break;
  		 	
  	/*default:

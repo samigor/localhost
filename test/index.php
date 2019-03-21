@@ -50,7 +50,7 @@ switch ($q) {
 	case 3:	include 'q3.php'; break;
 	default:include 'result.php';		
 }
-		?>
+		?> <hr>  <a href="../index.php">На главную</a>
 		<!-- Область основного контента -->
 	</td>
 </tr>
