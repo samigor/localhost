@@ -18,7 +18,18 @@
 	<th>В корзину</th>
 </tr>
 <?php
-
+$goods = selectAllItems ($link);
+if (is_array ($goods)) {
+	foreach ($goods as $item) { ?>
+		<tr>
+			<td><?php echo $item['title']?></td>
+			<td><?php echo $item['author']?></td>
+			<td><?php echo $item['pubyear']?></td>
+			<td><?php echo $item['price']?></td>
+			<td><a href="./add2basket.php?id=<?php echo $item['id'];?>"> В корзину</a></td>
+		</tr>
+	<?php }
+}
 ?>
 </table>
 </body>

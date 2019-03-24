@@ -9,11 +9,11 @@
 	$author = clearString ($link, $_POST['author']);
 	$pubyear = clearString ($link, $_POST['pubyear']);
 	$price = clearString ($link, $_POST['price']);
-	if (!addItemToCatalog ($title, $author, $pubyear, $price)) {
+	if (!addItemToCatalog ($link, $title, $author, $pubyear, $price)) {
 		echo "Произошла ошибка добавления товара в каталог!";
 	} else
 	{
-		header ("Location : add2cat.php");
+		header("Location: add2cat.php");
 		exit;
 	}
 ?>
