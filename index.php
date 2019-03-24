@@ -1,3 +1,5 @@
+<?php
+ob_start();?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -31,7 +33,7 @@
 
 <body class="landing-page">   
 			<?PHP
-					// Получаем текущий час в виде строки от 00 до 23 и приводим строку к целому числу от 0 до 23
+         					// Получаем текущий час в виде строки от 00 до 23 и приводим строку к целому числу от 0 до 23
 					$hour = (int) strftime ('%H');
 					$welcome = ''; //инициализируем переменную для приветствия
 					 
@@ -100,7 +102,14 @@
  		$title = 'лаба№11';
  		$header = "Лабораторная работа №11";
  		break;
- 		
+ 	case 'eshop':
+        $title = 'лаба№11. Интернет-магазин';
+        $header = "Интернет-магазин";
+        break;
+    case 'eshop-admin':
+        $title = 'лаба№11. Интернет-магазин.admin';
+        $header = "Интернет-магазин.admin";
+        break;
  	 }  
     
 ?>
@@ -143,6 +152,8 @@ $menu = array (
 					'sravnitri' => array ('title'=>'sravnitri', 'href'=>'sravnitri.php'),
 					'razmen' => array ('title'=>'razmen', 'href'=>'razmen.php'),
                     'test' => array ('title'=>'test', 'href'=>'./test/index.php'),
+                    'eshop' => array ('title'=>'eshop', 'href'=>'./eshop/catalog.php'),
+                    'eshop_admin' => array ('title'=>'eshop_admin', 'href'=>'./eshop/admin/index.php'),
 );
 /*echo "<ul>";*/
 foreach ($menu as $array){
@@ -210,7 +221,12 @@ foreach ($menu as $array){
  	case 'gbook':
  		include 'gbook.inc.php';
  		break;
- 		 	
+ 	case 'eshop':
+        include './eshop/catalog.php';
+        break;
+    case 'eshop_admin':
+        include './eshop/admin/index.php';
+        break;
  	/*default:
  		include 'index.php';
  		break;*/
