@@ -26,11 +26,15 @@ if (is_array ($goods)) {
 			<td><?php echo $item['author']?></td>
 			<td><?php echo $item['pubyear']?></td>
 			<td><?php echo $item['price']?></td>
-			<td><a href="./add2basket.php?id=<?php echo $item['id'];?>"> В корзину</a></td>
+			<td><a href="http://localhost/eshop/add2basket.php?id=eshop&put=<?php echo $item['id'];?>"> В корзину</a></td>
 		</tr>
 	<?php }
 }
 ?>
 </table>
+<?
+var_dump($_GET);
+echo $count;
+?>
 </body>
 </html>
