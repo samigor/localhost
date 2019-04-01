@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 		$salt = $_POST['salt'] ?: $salt;
 		$iterationCount = (int) $_POST['n'] ?: $iterationCount;
 		$result = getHash($string, $salt, $iterationCount);
-		$result = 'Хеш '. $result. ' успешно добавлен в файл';
+		//$result = 'Хеш '. $result. ' успешно добавлен в файл';
 		if(saveHash($user, $result, $salt, $iterationCount))
 			$result = 'Хеш '. $result. ' успешно добавлен в файл';
 		else
