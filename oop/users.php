@@ -43,11 +43,11 @@ class SuperUser extends User implements ISuperUser {
 		 User::showInfo($role);
 		
 	}
-	public function getInfo () {
-		$arr = array(	'$name' => $user ->name , 
-						'$login' => $this ->login , 
-						'$password' => $this ->password);
-		var_dump($arr);
+	public function getInfo ($name,$login,$password) {
+	
+		foreach ($this as $key => $value) {
+           print "$key => $value\n";
+       }
 	}
 }
 //---------------------------------------------
@@ -63,7 +63,7 @@ abstract class AUser
 //---------------------------------------------
 interface ISuperUser
 	{
-		function getInfo ();
+		function getInfo ($name,$login,$password);
 	}
 
 //---------------------------------------------
@@ -101,7 +101,13 @@ echo '<hr>';
 //echo $user1 -> name;
 
 $user = new SuperUser();
-echo $user -> getInfo();
+foreach($user as $key => $value) {
+    print "$key => $value\n";
+}
+echo "\n";
+echo '<hr>';
+echo $user -> getInfo(q,w,e);
+
 echo '<hr>';
 $user->role = 'admin';
 $user -> newIni(administrator, adm_login, adm_password);
