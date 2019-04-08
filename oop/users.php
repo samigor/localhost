@@ -1,72 +1,11 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
-//---------------------------------------------
 
-class User extends AUser{
-	
-	public $name;
-	public $login;
-	public $password;
-	
-	public function showInfo()
-	{
-		echo "Привет $this->name, твой логин - $this->login, пароль - $this->password, твоя роль - $this->role";
-	}
-	
-	public function newIni($name, $login, $password){
-			$this ->name = $name;
-			$this ->login = $login;
-			$this ->password = $password;
-	}
-	
-	public function delUser(){
-		echo "Пользователь $this->login удален";
-	}
-	
-	public function __clone() {
-echo "Клонируем user3 в user4 <br>";
-	}
-}
+ function __autoload ($class_name){
+ 	require $class_name. '.class.php';
+ }
 
-
-//---------------------------------------------
-class SuperUser extends User implements ISuperUser {
-	
-	public $role;
-	
-	public function roleInfo ($role)
-
-	{
-		$this ->role = $role;
-	//	echo "<br>Твой статус: $this->role";
-		 User::showInfo($role);
-		
-	}
-	public function getInfo ($name,$login,$password) {
-	
-		foreach ($this as $key => $value) {
-           print "$key => $value\n";
-       }
-	}
-}
-//---------------------------------------------
-
-	
-
-//---------------------------------------------
-abstract class AUser 
-		{
-		abstract function ShowInfo ();
-		}
-
-//---------------------------------------------
-interface ISuperUser
-	{
-		function getInfo ($name,$login,$password);
-	}
-
-//---------------------------------------------
 $user1 = new User();
 $user1 -> newIni(Oleg, oleg_login, Oleg_password);
 $user2 = new User();
@@ -115,5 +54,12 @@ echo $user -> showInfo();
 echo '<hr>';
 echo $user -> roleInfo(admin1);
 echo '<br/>';
-
+echo '<hr>';
+foreach ($user as $key => $value) {
+           print "key = $key, value =  $value \n";
+       }
+ echo '<hr>';
+ echo 'Текущее количество любителей печенек: ' . User::$loversCount;
+ echo '<br/>';
+ echo User::welcome();
 ?>
